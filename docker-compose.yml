@@ -1,0 +1,12 @@
+version: '2'
+services:
+    db:
+        build: .
+        image: dennis-docker
+        environment:
+            ORACLE_ALLOW_REMOTE: 'true'
+        ports: 
+            - "49161:1521"
+            - "49160:22"
+            - "49162:8080"
+        
